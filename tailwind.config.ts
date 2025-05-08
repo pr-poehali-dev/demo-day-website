@@ -1,7 +1,6 @@
-
-import type { Config } from "tailwindcss"
-import { fontFamily } from "tailwindcss/defaultTheme"
-import plugin from "tailwindcss/plugin"
+import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
 
 const config = {
   darkMode: ["class"],
@@ -91,9 +90,9 @@ const config = {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
-        "fade-in": { 
-          "0%": { opacity: "0" }, 
-          "100%": { opacity: "1" } 
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         "pulse-slow": {
           "0%, 100%": { opacity: "1" },
@@ -110,6 +109,16 @@ const config = {
             "background-position": "0% 50%",
           },
         },
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(-25%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -119,6 +128,7 @@ const config = {
         "fade-in": "fade-in 0.3s ease-out",
         "pulse-slow": "pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "rotate-gradient": "rotate-gradient 4s ease infinite",
+        bounce: "bounce 3s infinite",
       },
     },
   },
@@ -133,9 +143,9 @@ const config = {
         html: {
           scrollBehavior: "smooth",
         },
-      })
+      });
     }),
   ],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
